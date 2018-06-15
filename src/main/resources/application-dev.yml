@@ -1,0 +1,6 @@
+server:
+  port: 10123
+logging:
+  level:
+    root: info
+    orca.fun: debug

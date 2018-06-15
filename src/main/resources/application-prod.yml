@@ -1,0 +1,6 @@
+server:
+  port: 10121
+logging:
+  level:
+    root: error
+    orca.fun: error

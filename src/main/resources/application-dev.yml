@@ -1,5 +1,13 @@
 server:
   port: 10123
+  undertow:
+    accesslog:
+      enabled: true
+      dir: target/logs
+      pattern: combined
+  compression:
+    enabled: true
+    min-response-size: 1
 logging:
   level:
     root: info

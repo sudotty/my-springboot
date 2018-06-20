@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.Callable;
 
 /**
  * @author orca
@@ -86,6 +87,11 @@ public class StudentsController {
             studentService.deleteStudentById(id);
             return ResponseEntity.noContent().build();
         }).orElseThrow(() -> new NoSuchStudentException(id));
+    }
+
+    @GetMapping("/async")
+    public Callable<String> helloWorldAsync() {
+        return () -> "async: Hello World";
     }
 
 }
